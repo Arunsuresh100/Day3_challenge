@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100vh;
+        width:100%;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #020024;
+        width:100%;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        color: white;
+      }
+      .fullnav{
+        height: 8vh;
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 50px;
+        /*place-items: center;*/
+        align-items: center;
+      }
+      .nav_item ul {
+        display: flex;
+        gap: 3rem;
+        list-style-type: none;
+      }
+      .nav_item ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      .full_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 50px;
+        height: 92vh;
+      }
+      .section1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0px 20px;
+      }
+      .first_head {
+        font-size: 3.8rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+      .first_head span {
+        color: gold;
+      }
+      .second_head {
+        font-size: 2.5rem;
+        color: gold;
+        font-weight: 600;
+      }
+      .para {
+        margin-top: 10px;
+        font-size: 1.2rem;
+        max-width: 700px;
+        line-height: 1.5rem;
+      }
+      .section2{
+      }
+      .buttons button{
+            padding:10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top:5px;
+        }
+        .buttons .bt2{
+            background-color:transparent;
+            border:1px solid gold;
+            color:gold;
+        }
+      @media(max-width:1300px)
+      {
+      .section1 {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0px 10px;
+      }
+      .first_head {
+        font-size: 3.5rem;
+        font-weight: 700;
+      }
+      .first_head span {
+        color: gold;
+      }
+      .second_head {
+        font-size: 2.2rem;
+        color: gold;
+        font-weight: 600;
+      }
+      .section2 img{
+        width:500px;
+      }
+      }
+      @media(max-width:930px){
+      .section1 {
+        gap: .2rem;
+        padding: 0px 0px;
+      }
+      .first_head {
+        font-size: 3rem;
+      }
+      .second_head {
+        font-size: 1.5rem;
+      }
+      .para{
+        font-size: 1rem;
+      }
+      .full_container {
+        padding: 50px 30px;
+      }
+
+      .fullnav{
+        padding: 0px 20px;
+      }
+      .nav_item ul {
+        gap: 2rem;
+      }
+      .nav_item ul li a {
+        font-size: 1rem;
+      }
+        .section2 img{
+        width:400px;
+      }
+      }
+      @media(max-width:750px){
+      .first_head {
+        font-size: 2rem;
+      }
+      .second_head {
+        font-size: 1.2rem;
+      }
+      .para{
+        font-size: 1rem;
+      }
+      .full_container {
+        padding: 50px 30px;
+      }
+      .section2 img{
+        width:300px;
+      }
+      }
+       @media(max-width:550px){
+        .first_head {
+        font-size: 1.5rem;
+      }
+      .second_head {
+        font-size: 1rem;
+      }
+      .para{
+        font-size: 1rem;
+      }
+      .full_container {
+        padding: 50px 30px;
+      }
+         .section2 img{
+        width:180px;
+      }
+      .fullnav{
+        padding: 0px 10px;
+      }
+      .nav_item ul {
+        gap: 1.2rem;
+      }
+      .nav_item ul li a {
+        font-size: 1rem;
+      }
+      .full_container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        padding: 50px 20px;
+        height: 92vh;
+      }
+      .first_nav img{
+        width:80px;
+      }
+      .nav_item ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight:500;
+      }
+       }
+        @media(max-width:550px){
+        .first_head{
+            white-space:initial;
+        }
+        .buttons button{
+            padding:5px 10px;
+            font-size: .8rem;
+        }
+        }
+        
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="fullnav">
+          <div class="first_nav">
+            <img
+              src="https://www.logoshape.com/wp-content/uploads/2024/08/google-svg-logo_logoshape.com_.png"
+              alt=""
+              width="100"
+            />
+          </div>
+          <div class="nav_item">
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Services</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="full_container">
+        <div class="section1">
+          <div class="first_head">Hi, l`m <span>Arun Suresh</span>.</div>
+          <div class="second_head">Pursuing Mca</div>
+          <div class="para">
+            Working as an intern in Byte Minders Company ,Summer intership June
+            2025 | ByteMinders
+          </div>
+          <div class="buttons">
+            <button class="bt1">Contact Me</button>
+            <button class="bt2">Contact Me</button>
+          </div>
+        </div>
+        <div class="section2">
+          <img
+            src="https://file.aiquickdraw.com/imgcompressed/img/compressed_20831cba0544490e9724aaa47a61efc5.webp"
+            alt="svg_img"
+            width="600"
+          />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
