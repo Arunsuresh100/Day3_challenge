@@ -10,15 +10,14 @@
         padding: 0;
         box-sizing: border-box;
       }
-      html,body {
-        height:100%;
+      html,
+      body {
+        height: 100%;
       }
       body {
         font-family: Arial, Helvetica, sans-serif;
         background: #020024;
         background-size: cover;
-        width: 100%;
-        overflow-x: hidden;
         background-repeat: no-repeat;
         background: linear-gradient(
           90deg,
@@ -28,7 +27,7 @@
         );
         color: white;
       }
-      .fullnav{
+      .fullnav {
         height: 8vh;
         display: flex;
         justify-content: space-between;
@@ -46,14 +45,34 @@
         text-decoration: none;
         font-size: 1.1rem;
         font-weight: 600;
+        display: block;
+        position: relative;
+        transition: transform 0.8s ease, color 0.5s ease;
+        &:hover {
+          transform: scale(1.05);
+          color: gold;
+        }
       }
-
+      .nav_item ul li a::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 0;
+        bottom: 0;
+        background-color: gold;
+        border-radius: 10px;
+        transition: width 0.5s ease;
+      }
+      .nav_item ul li a:hover::before {
+        width: 100%;
+      }
       .full_container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 1rem;
-        padding: 50px 20px;
+        gap: 0rem;
+        padding: 50px 0px 50px 20px;
         height: 92vh;
       }
       .section1 {
@@ -81,149 +100,154 @@
         max-width: 700px;
         line-height: 1.5rem;
       }
-      .section2{
+      ons button {
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 5px;
       }
-      .buttons button{
-            padding:10px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top:5px;
-        }
-        .buttons .bt2{
-            background-color:transparent;
-            border:1px solid gold;
-            color:gold;
-        }
-        @media(max-width:1300px)
-      {
-      .section1 {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 0px 10px;
+      .buttons .bt1 {
+        background-color: gold;
+        color: black;
       }
-      .first_head {
-        font-size: 3.5rem;
-        font-weight: 700;
-      }
-      .first_head span {
+      .buttons .bt2 {
+        background-color: transparent;
+        border: 1px solid gold;
         color: gold;
       }
-      .second_head {
-        font-size: 2.2rem;
-        color: gold;
-        font-weight: 600;
-      }
-      .section2 img{
-        width:500px;
-      }
-      }
-       @media(max-width:1200px){
-      .section2 img{
-        width:350px;
-      }
-      @media(max-width:930px){
-      .section1 {
-        gap: .2rem;
-        padding: 0px 0px;
-      }
-      .first_head {
-        font-size: 3rem;
-      }
-      .second_head {
-        font-size: 1.5rem;
-      }
-      .para{
-        font-size: 1rem;
-      }
-      .full_container {
-        padding: 50px 30px;
-      }
-
-      .fullnav{
-        padding: 0px 20px;
-      }
-      .nav_item ul {
-        gap: 2rem;
-      }
-      .nav_item ul li a {
-        font-size: 1rem;
-      }
-        .section2 img{
-        width:400px;
-      }
-      }
-      @media(max-width:750px){
-      .first_head {
-        font-size: 2rem;
-      }
-      .second_head {
-        font-size: 1.2rem;
-      }
-      .para{
-        font-size: 1rem;
-      }
-      .full_container {
-        padding: 50px 30px;
-      }
-      .section2 img{
-        width:300px;
-      }
-      }
-       @media(max-width:550px){
+      @media (max-width: 1300px) {
+        .section1 {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          padding: 0px 10px;
+        }
         .first_head {
-        font-size: 1.5rem;
-      }
-      .second_head {
-        font-size: 1rem;
-      }
-      .para{
-        font-size: 1rem;
-      }
-      .full_container {
-        padding: 50px 30px;
-      }
-         .section2 img{
-        width:180px;
-      }
-      .fullnav{
-        padding: 0px 10px;
-      }
-      .nav_item ul {
-        gap: 1.2rem;
-      }
-      .nav_item ul li a {
-        font-size: 1rem;
-      }
-      .full_container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        padding: 50px 20px;
-        height: 92vh;
-      }
-      .first_nav img{
-        width:80px;
-      }
-      .nav_item ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-        font-weight:500;
-      }
-       }
-        @media(max-width:550px){
-        .first_head{
-            white-space:initial;
+          font-size: 3.5rem;
+          font-weight: 700;
         }
-        .buttons button{
-            padding:5px 10px;
-            font-size: .8rem;
+        .first_head span {
+          color: gold;
         }
+        .second_head {
+          font-size: 2.2rem;
+          color: gold;
+          font-weight: 600;
         }
-      
+        .section2 img {
+          width: 500px;
+        }
+      }
+      @media (max-width: 1200px) {
+        .section2 img {
+          width: 350px;
+        }
+      }
+      @media (max-width: 930px) {
+        .section1 {
+          gap: 0.2rem;
+          padding: 0px 0px;
+        }
+        .first_head {
+          font-size: 3rem;
+        }
+        .second_head {
+          font-size: 1.5rem;
+        }
+        .para {
+          font-size: 1rem;
+        }
+        .full_container {
+          padding: 50px 0px 50px 30px;
+        }
+
+        .fullnav {
+          padding: 0px 20px;
+        }
+        .nav_item ul {
+          gap: 2rem;
+        }
+        .nav_item ul li a {
+          font-size: 1rem;
+        }
+        .section2 img {
+          width: 400px;
+        }
+      }
+      @media (max-width: 780px) {
+        .first_head {
+          font-size: 2rem;
+        }
+        .second_head {
+          font-size: 1.2rem;
+        }
+        .para {
+          font-size: 1rem;
+        }
+        .full_container {
+          padding: 50px 0px 50px 30px;
+        }
+        .section2 img {
+          width: 300px;
+        }
+      }
+      @media (max-width: 550px) {
+        .first_head {
+          font-size: 1.5rem;
+        }
+        .second_head {
+          font-size: 1rem;
+        }
+        .para {
+          font-size: 1rem;
+        }
+        .full_container {
+          padding: 50px 0px 50px 30px;
+        }
+        .section2 img {
+          width: 180px;
+        }
+        .fullnav {
+          padding: 0px 10px;
+        }
+        .nav_item ul {
+          gap: 1rem;
+        }
+        .nav_item ul li a {
+          font-size: 1rem;
+        }
+        .full_container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0rem;
+          padding: 50px 0px 50px 10px;
+          height: 92vh;
+        }
+        .first_nav img {
+          width: 80px;
+        }
+        .nav_item ul li a {
+          color: white;
+          text-decoration: none;
+          font-size: 0.9rem;
+          font-weight: 500;
+        }
+      }
+      @media (max-width: 550px) {
+        .first_head {
+          white-space: initial;
+        }
+        .buttons {
+          display: flex;
+          gap: 0.5rem;
+        }
+        .buttons button {
+          padding: 5px 15px;
+          font-size: 0.8rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -260,7 +284,7 @@
           </div>
           <div class="buttons">
             <button class="bt1">Contact Me</button>
-            <button class="bt2">Contact Me</button>
+            <button class="bt2">Resume</button>
           </div>
         </div>
         <div class="section2">
