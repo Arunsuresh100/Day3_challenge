@@ -47,10 +47,10 @@
         font-weight: 600;
         display: block;
         position: relative;
-        transition: transform 0.8s ease, color 0.5s ease;
+        transition: transform 0.8s ease;
         &:hover {
           transform: scale(1.05);
-          color: gold;
+
         }
       }
       .nav_item ul li a::before {
@@ -60,7 +60,7 @@
         height: 2px;
         width: 0;
         bottom: 0;
-        background-color: gold;
+        background-color:white;
         border-radius: 10px;
         transition: width 0.5s ease;
       }
@@ -80,18 +80,37 @@
         flex-direction: column;
         gap: 0.5rem;
         padding: 0px 20px;
+        animation: slideRight 1s ease forwards;
+      }
+      @keyframes slideRight{
+        to{
+          transform: translateX(50px);
+        }
       }
       .first_head {
         font-size: 3.8rem;
         font-weight: 700;
         white-space: nowrap;
+        width:100%;
+        overflow:hidden;
+        animation:typing 2.5s linear forwards;
+      }
+      @keyframes typing{
+        from{
+          width:0%;
+        }
+        to{
+          width:100%;
+        }
       }
       .first_head span {
-        color: gold;
+          color: #00d4ff;
+
+
       }
       .second_head {
         font-size: 2.5rem;
-        color: gold;
+          color: #00d4ff;
         font-weight: 600;
       }
       .para {
@@ -99,6 +118,10 @@
         font-size: 1.2rem;
         max-width: 700px;
         line-height: 1.5rem;
+      }
+      .buttons{
+        display: flex;
+        gap:.5rem;
       }
       .buttons button {
         padding: 10px 20px;
@@ -108,18 +131,41 @@
         margin-top: 5px;
       }
       .buttons .bt1 {
-        background-color: gold;
+        background-color:#00d4ff;
         color: black;
+        transition:all .5s ease;
+        &:hover{
+          background-color: transparent;
+          color:#00d4ff;
+          border:1px solid #00d4ff;
+          transform: scale(1.05);
+        }
       }
       .buttons .bt2 {
         background-color: transparent;
-        border: 1px solid gold;
-        color: gold;
+        border: 1px solid #00d4ff;
+        color: #00d4ff;
+        color:#00d4ff;
+        transition:all .5s ease;
+        &:hover{
+          background-color:#00d4ff;
+          color:black;
+          transform: scale(1.05);
+        }
+      }
+      .section2 img{
+        animation:bounse 2.5s infinite alternate;
+      }
+      @keyframes bounse{
+        from{
+          transform: translateY(-8px);
+        }
+        to{
+          transform: translateY(0px);
+        }
       }
       @media (max-width: 1300px) {
         .section1 {
-          display: flex;
-          flex-direction: column;
           gap: 0.5rem;
           padding: 0px 10px;
         }
@@ -127,12 +173,8 @@
           font-size: 3.5rem;
           font-weight: 700;
         }
-        .first_head span {
-          color: gold;
-        }
         .second_head {
           font-size: 2.2rem;
-          color: gold;
           font-weight: 600;
         }
         .section2 img {
@@ -142,6 +184,9 @@
       @media (max-width: 1200px) {
         .section2 img {
           width: 350px;
+        }
+        .section1{
+          animation: none;
         }
       }
       @media (max-width: 930px) {
@@ -195,6 +240,7 @@
       @media (max-width: 550px) {
         .first_head {
           font-size: 1.5rem;
+          white-space: initial;
         }
         .second_head {
           font-size: 1rem;
@@ -218,28 +264,17 @@
           font-size: 1rem;
         }
         .full_container {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           gap: 0rem;
           padding: 50px 0px 50px 10px;
-          height: 92vh;
         }
         .first_nav img {
           width: 80px;
         }
         .nav_item ul li a {
-          color: white;
-          text-decoration: none;
           font-size: 0.9rem;
           font-weight: 500;
         }
-
-        .first_head {
-          white-space: initial;
-        }
         .buttons {
-          display: flex;
           gap: 0.5rem;
         }
         .buttons button {
